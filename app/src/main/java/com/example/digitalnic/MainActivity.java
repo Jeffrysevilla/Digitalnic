@@ -21,14 +21,13 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseHelper dbHelper;
     private SQLiteDatabase database;
 
-    private EditText productNameEditText, productQuantityEditText;
-    private Button addButton, deleteButton;
-    private ListView productListView;
+    private EditText etProducto, etCantidad;
+    private Button btnAgregar, btnEliminar;
+    private ListView lbProducto;
 
     private ArrayList<String> productNames = new ArrayList<>();
     private ArrayAdapter<String> adapter;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -36,27 +35,27 @@ public class MainActivity extends AppCompatActivity {
         dbHelper = new DatabaseHelper(this);
         database = dbHelper.getWritableDatabase();
 
-        productNameEditText = findViewById(R.id.productNameEditText);
-        productQuantityEditText = findViewById(R.id.productQuantityEditText);
-        addButton = findViewById(R.id.addButton);
-        deleteButton = findViewById(R.id.deleteButton);
-        productListView = findViewById(R.id.productListView);
+        etProducto = findViewById(R.id.etProducto);
+        etCantidad = findViewById(R.id.etCantidad);
+        btnAgregar = findViewById(R.id.btnAgregar);
+        btnEliminar = findViewById(R.id.btnEliminar);
+        lbProducto = findViewById(R.id.lbProducto);
 
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_single_choice, productNames);
-        productListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-        productListView.setAdapter(adapter);
+        lbProducto.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        lbProducto.setAdapter(adapter);
 
         loadProducts();
 
-        addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
+        btnAgregar.setOnClickListener(new View.OnClickListener() {
+
             public void onClick(View view) {
                 addProduct();
             }
         });
 
-        deleteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
+        btnEliminar.setOnClickListener(new View.OnClickListener() {
+
             public void onClick(View view) {
                 deleteProduct();
             }
@@ -77,8 +76,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addProduct() {
-        String name = productNameEditText.getText().toString();
-        String quantityStr = productQuantityEditText.getText().toString();
+        String name = etProducto.getText().toString();
+        String quantityStr = etCantidad.getText().toString();
 
         if (name.isEmpty() || quantityStr.isEmpty()) {
             Toast.makeText(this, "Por favor, introduce los datos del producto", Toast.LENGTH_SHORT).show();
@@ -93,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
         long result = database.insert(DatabaseHelper.TABLE_PRODUCTS, null, values);
         if (result != -1) {
             Toast.makeText(this, "Producto añadido", Toast.LENGTH_SHORT).show();
-            productNameEditText.setText("");
-            productQuantityEditText.setText("");
+            etProducto.setText("");
+            etCantidad.setText("");
             loadProducts();
         } else {
             Toast.makeText(this, "Error al añadir producto", Toast.LENGTH_SHORT).show();
@@ -102,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void deleteProduct() {
-        int position = productListView.getCheckedItemPosition();
+        int position = lbProducto.getCheckedItemPosition();
         if (position != ListView.INVALID_POSITION) {
             String item = adapter.getItem(position);
             String[] parts = item.split(" - ");
@@ -115,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
+
     protected void onDestroy() {
         database.close();
         dbHelper.close();

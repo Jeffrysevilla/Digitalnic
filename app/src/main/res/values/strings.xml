@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Digitalnic</string>
+    <string name="etProducto">Nombre Producto</string>
+    <string name="etCantidad">Cantidad</string>
+    <string name="btnAgregar">Agregar</string>
+    <string name="btnEliminar">Eliminar</string>
+    <string name="lbProducto"></string>
 </resources>
