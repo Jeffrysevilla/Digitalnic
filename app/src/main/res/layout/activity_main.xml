@@ -1,46 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/neon_background">
 
     <EditText
-        android:id="@+id/etProducto"
+        android:id="@+id/productNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/etProducto" />
+        android:hint="Nombre del producto"
+
+        android:textColor="#FFFFFF"
+        hintTextColor="#BBFFFFFF" />
 
     <EditText
-        android:id="@+id/etCantidad"
+        android:id="@+id/productQuantityEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/etCantidad"
-        android:inputType="number" />
+        android:hint="Cantidad"
+        android:inputType="number"
+
+        android:textColor="#FFFFFF"
+        hintTextColor="#BBFFFFFF" />
 
     <Button
-        android:id="@+id/btnAgregar"
+        android:id="@+id/addButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btnAgregar"
-        app:icon="@android:drawable/ic_menu_save"
-        app:rippleColor="#6750A3"
-        app:strokeColor="#6750A3" />
+        android:background="#FFFF"
+        android:text="Agregar a la lista"
+        android:textColor="	#000000" />
 
     <ListView
-        android:id="@+id/lbProducto"
+        android:id="@+id/productListView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+
+        android:textColor="#FFFFFF"/>
 
     <Button
-        android:id="@+id/btnEliminar"
+        android:id="@+id/deleteButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
-        android:backgroundTint="#C32020"
-        android:text="@string/btnEliminar"
-        app:icon="@android:drawable/ic_input_delete" />
+        android:text="Eliminar seleccionado"
+        android:background="#BBFFFFFF"
+        android:textColor="	#000000" />
 
 </LinearLayout>

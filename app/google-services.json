@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "26608542179",
+    "project_id": "digitalnic-2d2f2",
+    "storage_bucket": "digitalnic-2d2f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26608542179:android:8abf63085eda9e07a000d6",
+        "android_client_info": {
+          "package_name": "com.example.digitalnic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8Ny-PWj46LusjedEV4_lMgpCb3UmQsUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
