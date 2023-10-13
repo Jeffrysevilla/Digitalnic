@@ -7,14 +7,14 @@
     android:padding="16dp"
     android:background="@drawable/neon_background">
 
+
     <EditText
         android:id="@+id/etProducto"
-        hintTextColor="#BBFFFFFF"
+        android:textColorHint="#BBFFFFFF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:hint="Nombre del producto"
-        android:textColor="#FFFFFF" />
+        android:textColor="#BBFFFFFF" />
 
     <EditText
         android:id="@+id/etCantidad"
@@ -23,13 +23,13 @@
         android:hint="Cantidad"
         android:inputType="number"
         android:textColor="#FFFFFF"
-        hintTextColor="#BBFFFFFF" />
+        android:textColorHint="#BBFFFFFF" />
 
     <Button
         android:id="@+id/btnAgregar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFF"
+        android:backgroundTint="#DDAC0C"
         android:text="Agregar a la lista"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
@@ -40,16 +40,15 @@
     <ListView
         android:id="@+id/lbProducto"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="492dp"
         android:layout_weight="1"
-
-        android:textColor="#FFFFFF"/>
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/btnEliminar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#BBFFFFFF"
+        android:backgroundTint="#DDAC0C"
         android:text="Eliminar seleccionado"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"

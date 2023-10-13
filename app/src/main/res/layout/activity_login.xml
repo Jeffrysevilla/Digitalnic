@@ -4,13 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/neon_background"
     android:orientation="horizontal">
+
+    <!-- Asegúrate de tener este recurso en tu carpeta drawable -->
+
+
+    <ImageView
+        android:id="@+id/loginIcon"
+        android:layout_width="329dp"
+        android:layout_height="164dp"
+        android:src="@drawable/login_icon"
+        android:tint="#F8F8F8"
+        app:layout_constraintBottom_toTopOf="@+id/etEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="330dp"
         android:layout_height="66dp"
         android:hint="Correo Electronico"
+        android:textColorHint="#BBFFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/etPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
@@ -26,6 +44,7 @@
         android:layout_marginBottom="20dp"
         android:hint="Contraseña"
         android:inputType="textPassword"
+        android:textColorHint="#BBFFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
@@ -37,8 +56,13 @@
         android:layout_height="71dp"
         android:layout_below="@id/etPassword"
         android:layout_marginBottom="212dp"
+        android:backgroundTint="#DDAC0C"
         android:orientation="vertical"
-        android:text="Ingresar"
+        android:text="INGRESAR"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:icon="@drawable/user"
+        app:iconSize="55dp"
+        app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
