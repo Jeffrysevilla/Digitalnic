@@ -7,7 +7,7 @@
     android:background="@drawable/neon_background">
 
     <EditText
-        android:id="@+id/productNameEditText"
+        android:id="@+id/etProducto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nombre del producto"
@@ -16,17 +16,16 @@
         hintTextColor="#BBFFFFFF" />
 
     <EditText
-        android:id="@+id/productQuantityEditText"
+        android:id="@+id/etCantidad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Cantidad"
         android:inputType="number"
-
         android:textColor="#FFFFFF"
         hintTextColor="#BBFFFFFF" />
 
     <Button
-        android:id="@+id/addButton"
+        android:id="@+id/btnAgregar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFF"
@@ -34,7 +33,7 @@
         android:textColor="	#000000" />
 
     <ListView
-        android:id="@+id/productListView"
+        android:id="@+id/lbProducto"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -42,7 +41,7 @@
         android:textColor="#FFFFFF"/>
 
     <Button
-        android:id="@+id/deleteButton"
+        android:id="@+id/btnEliminar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Eliminar seleccionado"

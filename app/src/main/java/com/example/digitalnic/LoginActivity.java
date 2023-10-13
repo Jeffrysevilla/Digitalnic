@@ -15,8 +15,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText emailEditText, passwordEditText;
-    private Button loginButton;
+    private EditText etEmail, etPassword;
+    private Button btnLogin;
     private FirebaseAuth mAuth;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,15 +25,15 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        emailEditText = findViewById(R.id.emailEditText);
-        passwordEditText = findViewById(R.id.passwordEditText);
-        loginButton = findViewById(R.id.loginButton);
+        etEmail = findViewById(R.id.etEmail);
+        etPassword = findViewById(R.id.etPassword);
+        btnLogin = findViewById(R.id.btnLogin);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+
             public void onClick(View v) {
-                String email = emailEditText.getText().toString();
-                String password = passwordEditText.getText().toString();
+                String email = etEmail.getText().toString();
+                String password = etPassword.getText().toString();
 
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(LoginActivity.this, task -> {
@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                                startActivity(intent);
                                finish();
                             } else {
-                                Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                Toast.makeText(LoginActivity.this, "Datos incorrectos.",
                                         Toast.LENGTH_SHORT).show();
                             }
                         });

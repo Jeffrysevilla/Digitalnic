@@ -5,24 +5,24 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/emailEditText"
+        android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email" />
+        android:hint="Correo Electronico" />
 
     <EditText
-        android:id="@+id/passwordEditText"
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
+        android:hint="Contraseña"
         android:inputType="textPassword"
-        android:layout_below="@id/emailEditText"/>
+        android:layout_below="@id/etEmail"/>
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_below="@id/passwordEditText" />
+        android:text="Ingresar"
+        android:layout_below="@id/etPassword" />
 
 </RelativeLayout>
