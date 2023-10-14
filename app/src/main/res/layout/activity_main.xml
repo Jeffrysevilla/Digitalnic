@@ -25,6 +25,14 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#BBFFFFFF" />
 
+    <EditText
+        android:id="@+id/etPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#BBFFFFFF" />
     <Button
         android:id="@+id/btnAgregar"
         android:layout_width="match_parent"
