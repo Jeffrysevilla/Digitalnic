@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         }
         cursor.close();
 
-        productNames.add("Total a Pagar: C$" + total);
+        productNames.add("Total Inventario: C$" + total);
 
         adapter.notifyDataSetChanged();
     }
